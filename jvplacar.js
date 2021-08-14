@@ -38,7 +38,7 @@ pontoB_HTML.addEventListener('click', function () {
 })
 
 function verificarFimDoSet() {
-  if (pontoA >= 21 && pontoA - pontoB >= 2) {
+  if (pontoA >= 25 && pontoA - pontoB >= 2) {
     // nessa função criamos a diferença de dois ponto que o time tem que ter para se ganhar um set **&&** E ** sendo verdadeiro
     // if -> condição, o que faze se a condição for verdadeira
     alert(`${nomeTimeA} venceu o set!`)
@@ -48,7 +48,7 @@ function verificarFimDoSet() {
     verificarFimdoJogo()
   } //else {  else-> o que fazer se a condição for falsa
   // alert('time A não venceu ainda...')}
-  if (pontoB >= 21 && pontoB - pontoA >= 2) {
+  if (pontoB >= 25 && pontoB - pontoA >= 2) {
     alert(`${nomeTimeB} venceu o set!`)
     setB = setB + 1
     setB_HTML.innerText = setB
@@ -57,14 +57,14 @@ function verificarFimDoSet() {
   }
 }
 function verificarFimdoJogo() {
-  if (setA == 2) {
+  if (setA == 3) {
     //timeA ganhou o jogo
     for (let item of arraydePontosA) {
       totaldePontosA = totaldePontosA + item
     }
     alert(`${nomeTimeA} venceu o jogo fazendo ${totaldePontosA} pontos!`)
   }
-  if (setB == 2) {
+  if (setB == 3) {
     for (let item of arraydePontosB) {
       totaldePontosB = totaldePontosB + item
     }
